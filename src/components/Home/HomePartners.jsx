@@ -1,38 +1,68 @@
-// function HomePartners() {
-//   const images = [
-//     "https://via.placeholder.com/150/FF5733/FFFFFF?text=Image+1",
-//     "https://via.placeholder.com/150/33FF57/FFFFFF?text=Image+2",
-//     "https://via.placeholder.com/150/3357FF/FFFFFF?text=Image+3",
-//     "https://via.placeholder.com/150/FF33A1/FFFFFF?text=Image+4",
-//     "https://via.placeholder.com/150/FF8C33/FFFFFF?text=Image+5",
-//   ];
-//   return (
-//     <>
-//       <div class="relative flex overflow-x-hidden">
-//         <div className=" flex py-12 whitespace-nowrap animate-marquee">
-//           {images.map((src, index) => (
-//             <img
-//               key={index}
-//               src={src}
-//               alt={`Marquee Item ${index + 1}`}
-//               className="mx-4 w-32 h-auto"
-//             />
-//           ))}
-//         </div>
+import bqblogo1 from "../../assets/blaqbox-logo.png";
+import bqblogo2 from "../../assets/main color.png";
 
-//         <div className="flex top-0 py-12 whitespace-nowrap animate-marquee2">
-//           {images.map((src, index) => (
-//             <img
-//               key={index}
-//               src={src}
-//               alt={`Marquee Item ${index + 1}`}
-//               className="mx-4 w-32 h-auto"
-//             />
-//           ))}
-//         </div>
-//       </div>
-//     </>
-//   );
-// }
+function HomePartners() {
+  const images = [bqblogo1, bqblogo2];
 
-// export default HomePartners;
+  return (
+    <>
+      <div className="bg-black">
+        <div className="flex items-center justify-center mt-16">
+          <p className="title-font text-2xl text-white mt-5">partners</p>
+        </div>
+        <div className="relative flex overflow-hidden">
+          <div className="flex pb-16 whitespace-nowrap hover-stop cursor-pointer">
+            <div className="animate-marquee">
+              {images.map((src, index) => (
+                <img
+                  key={index}
+                  src={src}
+                  alt={`Marquee Item ${index + 1}`}
+                  className="mx-4 w-60 h-auto"
+                />
+              ))}
+
+              {images.map((src, index) => (
+                <img
+                  key={`duplicate-${index}`}
+                  src={src}
+                  alt={`Marquee Item ${index + 1}`}
+                  className="mx-4 w-60 h-auto"
+                />
+              ))}
+
+              {images.map((src, index) => (
+                <img
+                  key={`duplicate-${index}`}
+                  src={src}
+                  alt={`Marquee Item ${index + 1}`}
+                  className="mx-4 w-60 h-auto"
+                />
+              ))}
+
+              {images.map((src, index) => (
+                <img
+                  key={`duplicate-${index}`}
+                  src={src}
+                  alt={`Marquee Item ${index + 1}`}
+                  className="mx-4 w-60 h-auto"
+                />
+              ))}
+
+              {images.map((src, index) => (
+                <img
+                  key={`duplicate-${index}`}
+                  src={src}
+                  alt={`Marquee Item ${index + 1}`}
+                  className="mx-4 w-60 h-auto"
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default HomePartners;
