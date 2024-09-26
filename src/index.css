@@ -33,3 +33,32 @@ nav {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 }
+
+.bg-transparent1 {
+  position: relative;
+  z-index: 10;
+}
+
+.bg-transparent1 {
+  background: rgba(10, 10, 10, 1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-25%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  animation: marquee 15s linear infinite;
+}
+
+.hover-stop:hover .animate-marquee {
+  animation-play-state: paused;
+}
