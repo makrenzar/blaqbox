@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import "boxicons";
 import icon from "../../assets/favicon.png";
 import prd1 from "../../assets/prd1.jpg";
@@ -80,152 +81,170 @@ function HomeSocmed() {
     },
 
     {
-        id: 1,
-        image: prd1,
-        alt: "Post 1",
-        text: (
-          <>
-            <p>
-              ✨ Introducing the 𝐂𝐇𝐈𝐂𝐊𝐒 x 𝐆𝐄𝐓 𝐒𝐏𝐎𝐓𝐓𝐄𝐃 collection! 🌿 Handcrafted
-              by talented 𝐍𝐞𝐠𝐫𝐨𝐬 𝐖𝐞𝐚𝐯𝐞𝐫𝐬 from 𝐊𝐚𝐛𝐚𝐧𝐤𝐚𝐥𝐚𝐧, each piece beautifully
-              reflects local heritage and sustainable fashion. 🌍👗
-            </p>
-            <br />
-            <p>
-              Shop now at{" "}
-              <a
-                href="https://www.getspottedshop.com"
-                className="text-blue-400 underline"
-              >
-                www.getspottedshop.com
-              </a>{" "}
-              or visit the Get Spotted store at Ayala Malls Capitol Central! 🛍️
-            </p>
-            <br />
-            <p>
-              #CHICKSxGetSpotted #SupportLocal #SustainableStyle #NegrosWeavers
-              #KabankalanArtistry
-            </p>
-          </>
-        ),
-      },
-      {
-        id: 2,
-        image: prd2,
-        alt: "Post 2",
-        text: (
-          <>
-            <p>𝐆𝐈𝐕𝐄𝐀𝐖𝐀𝐘 𝐀𝐋𝐄𝐑𝐓!! 𝐁𝐄𝐋𝐀 𝐁𝐞𝐚𝐮𝐭𝐲 𝐏𝐫𝐨𝐝𝐮𝐜𝐭𝐬💄</p>
-            <br />
-            <p>
-              𝐘𝐂𝐂 𝐒𝐭𝐮𝐝𝐢𝐨𝐬 is giving 𝐘𝐎𝐔 a chance to win 𝐁𝐄𝐋𝐀 𝐛𝐲 𝐁𝐞𝐥𝐚 𝐏𝐚𝐝𝐢𝐥𝐥𝐚
-              Beauty Set featuring: or visit the Get Spotted store at Ayala Malls
-              Capitol Central! 🛍️
-            </p>
-            <br />
-            <p>😊 𝐃𝐨𝐭 𝐏𝐞𝐫𝐟𝐞𝐜𝐭𝐢𝐨𝐧 𝐂𝐡𝐞𝐞𝐤 𝐓𝐢𝐧𝐭 💋 𝐂𝐨𝐥𝐨𝐫 𝐂𝐡𝐚𝐧𝐠𝐢𝐧𝐠 𝐋𝐢𝐩 𝐁𝐚𝐥𝐦</p>
-            <br />
-            <p>
-              Enhance your natural glow with these must-have beauty essentials!
-            </p>
-            <br />
-            <p>𝐇𝐨𝐰 𝐭𝐨 𝐉𝐨𝐢𝐧:📢</p>
-          </>
-        ),
-      },
-      {
-        id: 3,
-        image: prd3,
-        alt: "Post 3",
-        text: (
-          <>
-            <p className="leading-7">
-              Unforgettable night at Stonehill Suites with Bacolod’s trendsetters!
-              💖✨ Got an exclusive look at the BELA Makeup Collection by Bela
-              Padilla, featuring her faves—the BELA Dot Perfection Cheek Tint and
-              Color Changing Lip Balm. Effortless beauty made for all, even
-              sensitive skin! 💄 Find BELA at Lopue’s, SM City Bacolod, and Ayala
-              Capitol Central, or shop online via Shopee and TikTok! 🌟
-              #BELAMakeup #EffortlessBeauty #BELAbyBelaPadilla
-            </p>
-          </>
-        ),
-      },
+      id: 1,
+      image: prd1,
+      alt: "Post 1",
+      text: (
+        <>
+          <p>
+            ✨ Introducing the 𝐂𝐇𝐈𝐂𝐊𝐒 x 𝐆𝐄𝐓 𝐒𝐏𝐎𝐓𝐓𝐄𝐃 collection! 🌿 Handcrafted
+            by talented 𝐍𝐞𝐠𝐫𝐨𝐬 𝐖𝐞𝐚𝐯𝐞𝐫𝐬 from 𝐊𝐚𝐛𝐚𝐧𝐤𝐚𝐥𝐚𝐧, each piece beautifully
+            reflects local heritage and sustainable fashion. 🌍👗
+          </p>
+          <br />
+          <p>
+            Shop now at{" "}
+            <a
+              href="https://www.getspottedshop.com"
+              className="text-blue-400 underline"
+            >
+              www.getspottedshop.com
+            </a>{" "}
+            or visit the Get Spotted store at Ayala Malls Capitol Central! 🛍️
+          </p>
+          <br />
+          <p>
+            #CHICKSxGetSpotted #SupportLocal #SustainableStyle #NegrosWeavers
+            #KabankalanArtistry
+          </p>
+        </>
+      ),
+    },
+    {
+      id: 2,
+      image: prd2,
+      alt: "Post 2",
+      text: (
+        <>
+          <p>𝐆𝐈𝐕𝐄𝐀𝐖𝐀𝐘 𝐀𝐋𝐄𝐑𝐓!! 𝐁𝐄𝐋𝐀 𝐁𝐞𝐚𝐮𝐭𝐲 𝐏𝐫𝐨𝐝𝐮𝐜𝐭𝐬💄</p>
+          <br />
+          <p>
+            𝐘𝐂𝐂 𝐒𝐭𝐮𝐝𝐢𝐨𝐬 is giving 𝐘𝐎𝐔 a chance to win 𝐁𝐄𝐋𝐀 𝐛𝐲 𝐁𝐞𝐥𝐚 𝐏𝐚𝐝𝐢𝐥𝐥𝐚
+            Beauty Set featuring: or visit the Get Spotted store at Ayala Malls
+            Capitol Central! 🛍️
+          </p>
+          <br />
+          <p>😊 𝐃𝐨𝐭 𝐏𝐞𝐫𝐟𝐞𝐜𝐭𝐢𝐨𝐧 𝐂𝐡𝐞𝐞𝐤 𝐓𝐢𝐧𝐭 💋 𝐂𝐨𝐥𝐨𝐫 𝐂𝐡𝐚𝐧𝐠𝐢𝐧𝐠 𝐋𝐢𝐩 𝐁𝐚𝐥𝐦</p>
+          <br />
+          <p>
+            Enhance your natural glow with these must-have beauty essentials!
+          </p>
+          <br />
+          <p>𝐇𝐨𝐰 𝐭𝐨 𝐉𝐨𝐢𝐧:📢</p>
+        </>
+      ),
+    },
+    {
+      id: 3,
+      image: prd3,
+      alt: "Post 3",
+      text: (
+        <>
+          <p className="leading-7">
+            Unforgettable night at Stonehill Suites with Bacolod’s trendsetters!
+            💖✨ Got an exclusive look at the BELA Makeup Collection by Bela
+            Padilla, featuring her faves—the BELA Dot Perfection Cheek Tint and
+            Color Changing Lip Balm. Effortless beauty made for all, even
+            sensitive skin! 💄 Find BELA at Lopue’s, SM City Bacolod, and Ayala
+            Capitol Central, or shop online via Shopee and TikTok! 🌟
+            #BELAMakeup #EffortlessBeauty #BELAbyBelaPadilla
+          </p>
+        </>
+      ),
+    },
 
-      {
-        id: 1,
-        image: prd1,
-        alt: "Post 1",
-        text: (
-          <>
-            <p>
-              ✨ Introducing the 𝐂𝐇𝐈𝐂𝐊𝐒 x 𝐆𝐄𝐓 𝐒𝐏𝐎𝐓𝐓𝐄𝐃 collection! 🌿 Handcrafted
-              by talented 𝐍𝐞𝐠𝐫𝐨𝐬 𝐖𝐞𝐚𝐯𝐞𝐫𝐬 from 𝐊𝐚𝐛𝐚𝐧𝐤𝐚𝐥𝐚𝐧, each piece beautifully
-              reflects local heritage and sustainable fashion. 🌍👗
-            </p>
-            <br />
-            <p>
-              Shop now at{" "}
-              <a
-                href="https://www.getspottedshop.com"
-                className="text-blue-400 underline"
-              >
-                www.getspottedshop.com
-              </a>{" "}
-              or visit the Get Spotted store at Ayala Malls Capitol Central! 🛍️
-            </p>
-            <br />
-            <p>
-              #CHICKSxGetSpotted #SupportLocal #SustainableStyle #NegrosWeavers
-              #KabankalanArtistry
-            </p>
-          </>
-        ),
-      },
-      {
-        id: 2,
-        image: prd2,
-        alt: "Post 2",
-        text: (
-          <>
-            <p>𝐆𝐈𝐕𝐄𝐀𝐖𝐀𝐘 𝐀𝐋𝐄𝐑𝐓!! 𝐁𝐄𝐋𝐀 𝐁𝐞𝐚𝐮𝐭𝐲 𝐏𝐫𝐨𝐝𝐮𝐜𝐭𝐬💄</p>
-            <br />
-            <p>
-              𝐘𝐂𝐂 𝐒𝐭𝐮𝐝𝐢𝐨𝐬 is giving 𝐘𝐎𝐔 a chance to win 𝐁𝐄𝐋𝐀 𝐛𝐲 𝐁𝐞𝐥𝐚 𝐏𝐚𝐝𝐢𝐥𝐥𝐚
-              Beauty Set featuring: or visit the Get Spotted store at Ayala Malls
-              Capitol Central! 🛍️
-            </p>
-            <br />
-            <p>😊 𝐃𝐨𝐭 𝐏𝐞𝐫𝐟𝐞𝐜𝐭𝐢𝐨𝐧 𝐂𝐡𝐞𝐞𝐤 𝐓𝐢𝐧𝐭 💋 𝐂𝐨𝐥𝐨𝐫 𝐂𝐡𝐚𝐧𝐠𝐢𝐧𝐠 𝐋𝐢𝐩 𝐁𝐚𝐥𝐦</p>
-            <br />
-            <p>
-              Enhance your natural glow with these must-have beauty essentials!
-            </p>
-            <br />
-            <p>𝐇𝐨𝐰 𝐭𝐨 𝐉𝐨𝐢𝐧:📢</p>
-          </>
-        ),
-      },
-      {
-        id: 3,
-        image: prd3,
-        alt: "Post 3",
-        text: (
-          <>
-            <p className="leading-7">
-              Unforgettable night at Stonehill Suites with Bacolod’s trendsetters!
-              💖✨ Got an exclusive look at the BELA Makeup Collection by Bela
-              Padilla, featuring her faves—the BELA Dot Perfection Cheek Tint and
-              Color Changing Lip Balm. Effortless beauty made for all, even
-              sensitive skin! 💄 Find BELA at Lopue’s, SM City Bacolod, and Ayala
-              Capitol Central, or shop online via Shopee and TikTok! 🌟
-              #BELAMakeup #EffortlessBeauty #BELAbyBelaPadilla
-            </p>
-          </>
-        ),
-      },
-
+    {
+      id: 1,
+      image: prd1,
+      alt: "Post 1",
+      text: (
+        <>
+          <p>
+            ✨ Introducing the 𝐂𝐇𝐈𝐂𝐊𝐒 x 𝐆𝐄𝐓 𝐒𝐏𝐎𝐓𝐓𝐄𝐃 collection! 🌿 Handcrafted
+            by talented 𝐍𝐞𝐠𝐫𝐨𝐬 𝐖𝐞𝐚𝐯𝐞𝐫𝐬 from 𝐊𝐚𝐛𝐚𝐧𝐤𝐚𝐥𝐚𝐧, each piece beautifully
+            reflects local heritage and sustainable fashion. 🌍👗
+          </p>
+          <br />
+          <p>
+            Shop now at{" "}
+            <a
+              href="https://www.getspottedshop.com"
+              className="text-blue-400 underline"
+            >
+              www.getspottedshop.com
+            </a>{" "}
+            or visit the Get Spotted store at Ayala Malls Capitol Central! 🛍️
+          </p>
+          <br />
+          <p>
+            #CHICKSxGetSpotted #SupportLocal #SustainableStyle #NegrosWeavers
+            #KabankalanArtistry
+          </p>
+        </>
+      ),
+    },
+    {
+      id: 2,
+      image: prd2,
+      alt: "Post 2",
+      text: (
+        <>
+          <p>𝐆𝐈𝐕𝐄𝐀𝐖𝐀𝐘 𝐀𝐋𝐄𝐑𝐓!! 𝐁𝐄𝐋𝐀 𝐁𝐞𝐚𝐮𝐭𝐲 𝐏𝐫𝐨𝐝𝐮𝐜𝐭𝐬💄</p>
+          <br />
+          <p>
+            𝐘𝐂𝐂 𝐒𝐭𝐮𝐝𝐢𝐨𝐬 is giving 𝐘𝐎𝐔 a chance to win 𝐁𝐄𝐋𝐀 𝐛𝐲 𝐁𝐞𝐥𝐚 𝐏𝐚𝐝𝐢𝐥𝐥𝐚
+            Beauty Set featuring: or visit the Get Spotted store at Ayala Malls
+            Capitol Central! 🛍️
+          </p>
+          <br />
+          <p>😊 𝐃𝐨𝐭 𝐏𝐞𝐫𝐟𝐞𝐜𝐭𝐢𝐨𝐧 𝐂𝐡𝐞𝐞𝐤 𝐓𝐢𝐧𝐭 💋 𝐂𝐨𝐥𝐨𝐫 𝐂𝐡𝐚𝐧𝐠𝐢𝐧𝐠 𝐋𝐢𝐩 𝐁𝐚𝐥𝐦</p>
+          <br />
+          <p>
+            Enhance your natural glow with these must-have beauty essentials!
+          </p>
+          <br />
+          <p>𝐇𝐨𝐰 𝐭𝐨 𝐉𝐨𝐢𝐧:📢</p>
+        </>
+      ),
+    },
+    {
+      id: 3,
+      image: prd3,
+      alt: "Post 3",
+      text: (
+        <>
+          <p className="leading-7">
+            Unforgettable night at Stonehill Suites with Bacolod’s trendsetters!
+            💖✨ Got an exclusive look at the BELA Makeup Collection by Bela
+            Padilla, featuring her faves—the BELA Dot Perfection Cheek Tint and
+            Color Changing Lip Balm. Effortless beauty made for all, even
+            sensitive skin! 💄 Find BELA at Lopue’s, SM City Bacolod, and Ayala
+            Capitol Central, or shop online via Shopee and TikTok! 🌟
+            #BELAMakeup #EffortlessBeauty #BELAbyBelaPadilla
+          </p>
+        </>
+      ),
+    },
   ];
+
+  const [showModal, setShowModal] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const [visibleItems, setVisibleItems] = useState(6);
+
+  const loadMoreItems = () => {
+    setVisibleItems((prevVisibleItems) => prevVisibleItems + 3);
+  };
+
+  const openModal = (image) => {
+    setSelectedImage(image);
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+    setSelectedImage(null);
+  };
   return (
     <>
       {/* <div className="flex items-center space-x-8 max-w-7xl mx-auto">
@@ -291,20 +310,107 @@ function HomeSocmed() {
           </div>
           <div className="h-[1px] max-w-7xl mx-auto flex items-center justify-center bg-gray-600"></div>
           <div className="flex flex-col md:grid md:grid-cols-3">
-            {Items.map((item, index) => (
-              <div key={index} className="relative overflow-hidden mt-16">
+            {Items.slice(0, visibleItems).map((item) => (
+              <div
+                key={item.id}
+                className="relative overflow-hidden mt-16 cursor-pointer"
+                onClick={() => openModal(item.image)}
+              >
                 <img
                   src={item.image}
                   alt={item.alt}
                   className="w-96 h-96 max-w-7xl mx-auto"
                 />
-                <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-75 text-white opacity-0 transition-opacity duration-300 hover:opacity-100 w-96  p-4 whitespace-pre-wrap mx-auto cursor-pointer">
-                  <p className="text-center p-font ">{item.text}</p>
+                <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-75 text-white opacity-0 transition-opacity duration-300 hover:opacity-100 w-96 p-4 whitespace-pre-wrap mx-auto">
+                  <p className="text-center">{item.text}</p>
                 </div>
               </div>
             ))}
           </div>
+          {visibleItems < Items.length && (
+            <div className="flex items-center justify-center mt-9">
+              <button
+                className="bg-[#C1272D] border border-transparent hover:bg-transparent hover:border-white px-6 py-1 rounded-lg text-center transition duration-300 ease-in-out"
+                onClick={loadMoreItems}
+              >
+                <span className="text-[#ffffff] transform transition-transform duration-300 ease-in-out hover:scale-90 flex items-center justify-center title-font">
+                  Load More
+                </span>
+              </button>
+            </div>
+          )}
         </div>
+
+        {showModal && (
+          <div
+            className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
+            onClick={closeModal}
+          >
+            <div
+              className="bg-white rounded-lg shadow-lg overflow-hidden max-w-4xl mx-auto flex overflow-y-scroll"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="relative w-2/3">
+                <button
+                  className="absolute top-2 -right-72 text-gray-600 hover:text-gray-800"
+                  onClick={closeModal}
+                >
+                  ✕
+                </button>
+                <img
+                  src={selectedImage}
+                  alt="Selected"
+                  className="w-full h-auto"
+                />
+              </div>
+
+              {/* Text Section */}
+              <div className="w-1/3 p-4 text-black">
+                <p className="flex items-center font-bold mb-2 p-font">
+                  <box-icon
+                    type="logo"
+                    name="instagram"
+                    color="#000000"
+                    className="mr-2"
+                  ></box-icon>
+                  yccstudios24
+                </p>
+
+                <div className="h-[1px]  mx-auto flex items-center justify-center bg-gray-600"></div>
+
+                <p>
+                  ✨ Introducing the 𝐂𝐇𝐈𝐂𝐊𝐒 x 𝐆𝐄𝐓 𝐒𝐏𝐎𝐓𝐓𝐄𝐃 collection! 🌿
+                  Handcrafted by talented 𝐍𝐞𝐠𝐫𝐨𝐬 𝐖𝐞𝐚𝐯𝐞𝐫𝐬 from 𝐊𝐚𝐛𝐚𝐧𝐤𝐚𝐥𝐚𝐧, each
+                  piece beautifully reflects local heritage and sustainable
+                  fashion. 🌍👗
+                </p>
+                <br />
+                <p>
+                  Shop now at{" "}
+                  <a
+                    href="https://www.getspottedshop.com"
+                    className="text-blue-400 underline"
+                  >
+                    www.getspottedshop.com
+                  </a>{" "}
+                  or visit the Get Spotted store at Ayala Malls Capitol Central!
+                  🛍️
+                </p>
+                <br />
+                <p>
+                  #CHICKSxGetSpotted #SupportLocal #SustainableStyle
+                  #NegrosWeavers #KabankalanArtistry
+                </p>
+
+                <div className="h-[1px] mx-auto flex items-center justify-center bg-gray-600 mt-2"></div>
+
+                <p className="p-font">
+                  September 27, 2024
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </>
   );
