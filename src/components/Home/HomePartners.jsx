@@ -1,17 +1,17 @@
-import bqblogo1 from "../../assets/blaqbox-logo.png";
+// import bqblogo1 from "../../assets/blaqbox-logo.png";
 import bqblogo2 from "../../assets/main color.png";
 
 function HomePartners() {
-  const images = [bqblogo1, bqblogo2];
+  const images = [bqblogo2, bqblogo2, ];
 
   return (
     <>
       <div className="bg-black">
-        <div className="flex items-center justify-center mt-16">
+        {/* <div className="flex items-center justify-center mt-16">
           <p className="title-font text-2xl text-white mt-5">partners</p>
-        </div>
-        <div className="relative flex overflow-hidden">
-          <div className="flex pb-16 whitespace-nowrap hover-stop cursor-pointer">
+        </div> */}
+        <div className="relative flex overflow-hidden mt-16">
+          <div className="flex py-16 whitespace-nowrap hover-stop cursor-pointer">
             <div className="animate-marquee">
               {images.map((src, index) => (
                 <img
