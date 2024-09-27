@@ -46,7 +46,7 @@ function HomeServices() {
         </p>
         <button className="bg-[#C1272D] border border-transparent hover:bg-transparent hover:border-white w-56 px-7 py-4 rounded-lg text-center transition duration-300 ease-in-out mt-7">
           <span className="text-[#ffffff] transform transition-transform duration-300 ease-in-out hover:scale-90 title-font flex items-center justify-center">
-            More Info
+            More Info 
           </span>
         </button>
       </div>
